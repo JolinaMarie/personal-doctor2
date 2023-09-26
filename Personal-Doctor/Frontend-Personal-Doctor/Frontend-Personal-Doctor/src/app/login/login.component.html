@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-Page</title>
+  </head>
+
+  
+  <body>
+    <div id ="container">
+    <div class="logo-div">
+      <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" height="200"/>
+     
+    </div>
+    <div class="input-div">
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput type="email" id = "email" pattern=".+@globex\.com" required/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Passwort</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" />
+
+      </mat-form-field>
+
+      <button class="button" mat-raised-button color="primary">LOGIN</button>
+      <br />
+      <button
+        mat-raised-button
+        class="button"
+        color= "primary"
+        routerLink="/regestrieren"
+      >
+        REGISTRIEREN
+      </button>
+    </div>
+  </div>
+  </body>
+</html>
+
