@@ -1,0 +1,208 @@
+/*.input-div {
+    margin: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button {
+    border: 30px;
+    margin: 20px;
+    align-items: center;
+  }*/
+  #container{
+
+    margin-left:auto;        
+  
+    margin-right:auto;  
+          
+  
+    width:500px;        
+  
+    background-color:#ffffff;        
+  
+    padding:5px;
+  
+    border: 3px solid rgb(51, 101, 237);
+  
+  }
+  
+   
+  
+   
+  
+  .Überschrift{
+    display: block;
+    margin: 5%;
+    padding:5px;
+
+    align-items: center;
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+  .E-Mail{
+  
+   
+  
+    display: block;
+  
+   
+  
+    float: left;
+  
+   
+  
+    width: 50%;
+  
+   
+  
+    display: block;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+  .E-Mail-bestätigen{
+  
+   
+  
+    display: block;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+  .Geschlecht{
+  
+   
+  
+    display: block;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+  .Passwort{
+  
+   
+  
+    display: block;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+  .Passwort-bestätigen{
+  
+   
+  
+    display: block;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+  .Login{
+  
+   
+  
+      display: block;
+  
+   
+  
+      text-align: center;
+  
+   
+  
+      /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+  .Registrieren{
+  
+   
+  
+    display: block;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
