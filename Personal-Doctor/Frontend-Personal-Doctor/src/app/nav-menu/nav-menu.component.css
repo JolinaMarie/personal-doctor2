@@ -11,5 +11,5 @@
 
 /* Ändern Sie die Hintergrundfarbe der Toolbar */
 .mat-toolbar[color="primary"] {
-  background-color: #2196F3; /* Farbe anpassen */
+  background-color: rgba(68, 114, 196, 1); /* Farbe anpassen */
 }
