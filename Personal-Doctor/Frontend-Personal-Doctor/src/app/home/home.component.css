@@ -15,3 +15,7 @@
     height: 450;
     border: 3px solid rgb(51, 101, 237);
 }
+
+.button{
+    background-color: rgba(68, 114, 196, 1); 
+}

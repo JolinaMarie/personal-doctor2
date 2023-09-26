@@ -23,7 +23,7 @@
   
     padding:5px;
   
-    border: 3px solid rgb(51, 101, 237);
+    /* border: 3px solid rgb(51, 101, 237); */
   
   }
   
@@ -48,14 +48,8 @@
   }
   
    
-  
-   
-  
-  .E-Mail{
-  
-   
-  
-    display: block;
+  .FirstName{
+
   
    
   
@@ -81,9 +75,19 @@
   
   }
   
+  
+  .LastName{
+  
+   
+
+  
    
   
-  .E-Mail-bestätigen{
+    float: left;
+  
+   
+  
+    width: 30%;
   
    
   
@@ -103,14 +107,44 @@
   
    
   
-   
-  
-  .Geschlecht{
+  .E-Mail{
   
    
+  
+   
+  
+   
+  
+    float: left;
+  
+   
+  
+    width: 50%;
   
     display: block;
   
+    text-align: center;
+  
+   
+  
+    /* border: 1px solid black; */
+  
+   
+  
+  }
+  
+   
+  
+  .E-Mail-bestätigen{
+  
+
+    float: left;
+  
+   
+  
+    width: 30%;
+  
+    display: block;
    
   
     text-align: center;
@@ -178,6 +212,7 @@
    
   
       text-align: center;
+      color: rgba(68, 114, 196, 1); 
   
    
   
@@ -194,15 +229,15 @@
    
   
     display: block;
-  
-   
-  
     text-align: center;
+    color: rgba(68, 114, 196, 1); 
   
    
   
     /* border: 1px solid black; */
   
-   
-  
+  }
+
+  .button{
+    background-color: rgba(68, 114, 196, 1); 
   }

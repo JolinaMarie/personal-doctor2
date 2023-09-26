@@ -1,18 +1,29 @@
-a.navbar-brand {
-    white-space: normal;
-    text-align: center;
-    word-break: break-all;
-  }
-  
-  html {
-    font-size: 14px;
-  }
-  @media (min-width: 768px) {
-    html {
-      font-size: 16px;
-    }
-  }
-  
-  .box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-  }
+.mat-toolbar {
+
+  height: 50px; /* Höhe der Toolbar anpassen */
+
+}
+
+ 
+
+/* Stil für die span-Elemente innerhalb der Toolbar */
+
+.toolbar-text {
+
+  margin-right: 16px; /* Abstand zwischen den Textelementen */
+
+  font-size: 18px; /* Schriftgröße anpassen */
+
+  color: "primary"; /* Textfarbe anpassen */
+
+}
+
+ 
+
+/* Ändern Sie die Hintergrundfarbe der Toolbar */
+
+.mat-toolbar[color="primary"] {
+
+  background-color: rgba(68, 114, 196, 1); /* Farbe anpassen */
+
+}
