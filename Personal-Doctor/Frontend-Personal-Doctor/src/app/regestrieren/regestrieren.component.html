@@ -16,13 +16,15 @@
 
     </div>
 
+    <form #registrationForm="ngForm" (ngSubmit)="registerUser()">
+
     <div class="FirstName">
 
       <mat-form-field>
 
         <mat-label>First Name</mat-label>
 
-        <input matInput type="firstname" required />
+        <input matInput type="firstname" name="firstname" [(ngModel)]="createUser.firstname" required />
 
       </mat-form-field>
 
@@ -34,7 +36,7 @@
 
         <mat-label>Last Name</mat-label>
 
-        <input matInput type="lastname" required />
+        <input matInput type="lastname" name="lastname" [(ngModel)]="createUser.lastname" required />
 
       </mat-form-field>
 
@@ -49,7 +51,7 @@
 
         <mat-label>E-Mail</mat-label>
 
-        <input matInput type="email" id="email" pattern=".+@globex\.com" required />
+        <input matInput type="email" id="email" pattern=".+@globex\.com" name="email" [(ngModel)]="createUser.email" required />
 
       </mat-form-field>
 
@@ -63,7 +65,7 @@
 
         <mat-label>E-Mail bestätigen</mat-label>
 
-        <input matInput type="email" id="email" pattern=".+@globex\.com" required />
+        <input matInput type="email" id="email" pattern=".+@globex\.com" name="emailVerification" [(ngModel)]="createUser.confirmEmail" required />
 
       </mat-form-field>
 
@@ -75,10 +77,10 @@
 
         <mat-label>Passwort</mat-label>
 
-        <input matInput [type]="hide ? 'password' : 'text'" />
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="createUser.password" required/>
 
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide">
+          [attr.aria-pressed]="hide" >
 
           <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
 
@@ -96,7 +98,7 @@
 
         <mat-label>Passwort bestätigen</mat-label>
 
-        <input matInput [type]="hide ? 'password' : 'text'" />
+        <input matInput [type]="hide ? 'password' : 'text'" name="passwordConfirmation" [(ngModel)]="createUser.confirmPassword" required/>
 
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="hide">
@@ -123,13 +125,14 @@
 
     <div class="Registrieren">
 
-      <button mat-raised-button class="button" color="primary">
+      <button mat-raised-button class="button" color="primary" type="submit">
 
         REGISTRIEREN
 
       </button>
 
     </div>
+    </form>
 
   </div>
 </body>

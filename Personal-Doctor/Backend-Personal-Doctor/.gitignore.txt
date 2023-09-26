@@ -1,0 +1,90 @@
+# Visual Studio generated files
+.vscode/
+.vs/
+bin/
+obj/
+node_modules/
+publish/
+logs/
+temp/
+*.user
+*.suo
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.suo
+[Tt]humbs.db
+*.DS_Store
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+
+# Rider
+.idea/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+packages/
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+# VS Code directories
+.vscode/
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+# Windows shortcuts
+*.lnk
+
+# Azure Service Fabric Files
+AppPackages/
+Debug/
+df/
+
+# User-specific files
+*.suo
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+
+# Rider
+.idea/
