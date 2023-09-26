@@ -1,29 +1,15 @@
 .mat-toolbar {
-
   height: 50px; /* Höhe der Toolbar anpassen */
-
 }
-
- 
 
 /* Stil für die span-Elemente innerhalb der Toolbar */
-
 .toolbar-text {
-
   margin-right: 16px; /* Abstand zwischen den Textelementen */
-
   font-size: 18px; /* Schriftgröße anpassen */
-
   color: "primary"; /* Textfarbe anpassen */
-
 }
 
- 
-
 /* Ändern Sie die Hintergrundfarbe der Toolbar */
-
 .mat-toolbar[color="primary"] {
-
-  background-color: rgba(68, 114, 196, 1); /* Farbe anpassen */
-
+  background-color: #2196F3; /* Farbe anpassen */
 }
