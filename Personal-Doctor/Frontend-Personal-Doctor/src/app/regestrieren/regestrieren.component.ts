@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegestrierenService } from './regestrieren.service';
 import { User } from '../model/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-regestrieren',
@@ -12,26 +13,34 @@ export class RegestrierenComponent{
   hidePassword: boolean = true; 
   hidePasswordConfirmation: boolean = true; 
   errorMessage: string = ''; // Initialize an error message variable
-  getAllUsers: any[] = [];
-  createUser: User = new User();
+  user: User = new User();
 
-  constructor(private registerUserService : RegestrierenService) { }
+  constructor(private registerUserService : RegestrierenService, private router: Router) { }
 
   registerUser() {
-    // Check if passwords match before sending the request (you may need additional validation)
-    if (this.createUser.password === this.createUser.confirmPassword) {
-      this.registerUserService.addUser(this.createUser).subscribe((response: any) => {
-        // Handle successful registration (e.g., display a success message or navigate to a login page)
-        console.log('User registration successful', response);
-      }, error => {
-        // Handle registration failure (e.g., display an error message)
-        console.error('User registration failed', error);
-        this.errorMessage = 'Registration failed: ' + error.message; // Set error message
-      });
+    if (!this.user.areFieldsEmpty()) {
+      if (this.user.password === this.user.confirmPassword && this.user.email === this.user.confirmEmail) {
+        this.registerUserService.addUser(this.user).subscribe(
+          (response: any) => {
+            // Handle successful registration (e.g., display a success message or navigate to a login page)
+            console.log('User registration successful', response);
+            this.user.clearFields();
+            setTimeout(() => {
+              this.router.navigate(['/login']); // Adjust the route path as needed
+            }, 5000);
+          },
+          (error) => {
+            console.error('Registration failed', error);
+            this.errorMessage = 'Registrierung fehlgeschlagen, bitte versuchen Sie es erneut: ' + error.message;
+          }
+        );
+      } else {
+        console.error('Passwords or Emails do not match');
+        this.errorMessage = 'Passwort oder E-mail stimmen nicht überein';
+      }
     } else {
-      // Handle password mismatch (e.g., show an error message)
-      console.error('Passwords do not match');
-      this.errorMessage = 'Passwords do not match'; // Handle password mismatch
+      console.error('Fields are empty');
+      this.errorMessage = 'Bitte füllen Sie alle Felder aus.';
     }
   }
 }

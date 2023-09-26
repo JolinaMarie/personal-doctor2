@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user.model';
 import { LoginService } from './login.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ export class LoginComponent{
   hide = true;
   user: User = new User();
   errorMessage: string = '';
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private formbuilder: FormBuilder) { }
+
 
   loginUser() {
     if (!this.user.email || !this.user.password) {

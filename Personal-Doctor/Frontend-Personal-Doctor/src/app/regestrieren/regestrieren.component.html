@@ -8,133 +8,86 @@
 </head>
 
 <body>
-  <div id="container">
 
-    <div class="Überschrift">
-      <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" />
-      <!-- <h1 class>REGISTRIERUNG</h1> -->
+  <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
+    <div id="container">
 
-    </div>
-
-    <form #registrationForm="ngForm" (ngSubmit)="registerUser()">
-
-    <div class="FirstName">
-
-      <mat-form-field>
-
-        <mat-label>First Name</mat-label>
-
-        <input matInput type="firstname" name="firstname" [(ngModel)]="createUser.firstname" required />
-
-      </mat-form-field>
-
-    </div>
-
-    <div class="LastName">
-
-      <mat-form-field>
-
-        <mat-label>Last Name</mat-label>
-
-        <input matInput type="lastname" name="lastname" [(ngModel)]="createUser.lastname" required />
-
-      </mat-form-field>
-
-    </div>
+      <div class="Überschrift">
+        <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" />
+      </div>
 
 
+      <div class="FirstName">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput type="text" name="firstname" [(ngModel)]="user.firstname" required />
+        </mat-form-field>
+      </div>
 
 
-    <div class="E-Mail">
-
-      <mat-form-field>
-
-        <mat-label>E-Mail</mat-label>
-
-        <input matInput type="email" id="email" pattern=".+@globex\.com" name="email" [(ngModel)]="createUser.email" required />
-
-      </mat-form-field>
-
-    </div>
+      <div class="LastName">
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input matInput type="text" name="lastname" [(ngModel)]="user.lastname" required />
+        </mat-form-field>
+      </div>
 
 
+      <div class="E-Mail">
+        <mat-form-field>
+          <mat-label>E-Mail</mat-label>
+          <input matInput type="email" id="email" pattern=".+@globex\.com" name="email" [(ngModel)]="user.email" required />
+        </mat-form-field>
+      </div>
 
-    <div class="E-Mail-bestätigen">
 
-      <mat-form-field>
+      <div class="E-Mail-bestätigen">
+        <mat-form-field>
+          <mat-label>E-Mail bestätigen</mat-label>
+          <input matInput type="email" id="email" pattern=".+@globex\.com" name="emailVerification" [(ngModel)]="user.confirmEmail" required />
+        </mat-form-field>
+      </div>
 
-        <mat-label>E-Mail bestätigen</mat-label>
 
-        <input matInput type="email" id="email" pattern=".+@globex\.com" name="emailVerification" [(ngModel)]="createUser.confirmEmail" required />
+      <div class="Passwort">
+        <mat-form-field>
+          <mat-label>Passwort</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="user.password" required />
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
 
-      </mat-form-field>
 
-    </div>
 
-    <div class="Passwort">
+      <div class="Passwort-bestätigen">
+        <mat-form-field>
+          <mat-label>Passwort bestätigen</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" name="passwordConfirmation" [(ngModel)]="user.confirmPassword" required />
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
 
-      <mat-form-field>
+      <br/>
 
-        <mat-label>Passwort</mat-label>
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
 
-        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="createUser.password" required/>
-
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide" >
-
-          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-
+    
+      <div class="Registrieren">
+        <button mat-raised-button class="button" color="primary" type="submit">
+          REGISTRIEREN
         </button>
 
-      </mat-form-field>
+      </div>
+
 
     </div>
-
-
-
-    <div class="Passwort-bestätigen">
-
-      <mat-form-field>
-
-        <mat-label>Passwort bestätigen</mat-label>
-
-        <input matInput [type]="hide ? 'password' : 'text'" name="passwordConfirmation" [(ngModel)]="createUser.confirmPassword" required/>
-
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide">
-
-          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-
-        </button>
-
-      </mat-form-field>
-
-    </div>
-
-
-
-    <!-- <div class="Login">
-
-      <button mat-raised-button class="button" color="primary" routerLink="/login">LOGIN</button>
-
-    </div> -->
-
-    <br />
-
-
-
-    <div class="Registrieren">
-
-      <button mat-raised-button class="button" color="primary" type="submit" routerLink="/login">
-
-        REGISTRIEREN
-
-      </button>
-
-    </div>
-    </form>
-
-  </div>
+  </form>
 </body>
 
 </html>
