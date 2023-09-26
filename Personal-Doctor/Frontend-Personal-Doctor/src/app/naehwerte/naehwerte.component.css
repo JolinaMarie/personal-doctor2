@@ -1,0 +1,29 @@
+.Überschrift{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hinweis100g{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hinweis{
+
+    height: 450;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(51, 101, 237); 
+}
+
+.Eingabe{
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

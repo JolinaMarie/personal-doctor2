@@ -13,7 +13,10 @@
 
 .Hinweis-div{
     height: 450;
-    border: 3px solid rgb(51, 101, 237);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(51, 101, 237); 
 }
 
 .button{
