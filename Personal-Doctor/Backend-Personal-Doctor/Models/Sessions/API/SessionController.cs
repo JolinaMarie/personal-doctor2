@@ -21,16 +21,16 @@ namespace Backend_Personal_Doctor.Models.Sessions.API
 
 
         [HttpPost("login")]
-        public ActionResult<string> Login(string username, string password)
+        public ActionResult<string> Login(string email, string password)
         {
             DateTime expiry = DateTime.Now.AddMinutes(20);
-            if (!userRepository.DoesEmailAndPasswordExist(username, password))
+            if (!userRepository.DoesEmailAndPasswordExist(email, password))
             {
                 return Unauthorized();
             }
 
             Session session = new Session();
-            User user = userRepository.GetUserByEmailAndPassword(username, password);
+            User user = userRepository.GetUserByEmailAndPassword(email, password);
 
             Guid uniqueId = Guid.NewGuid();
             string sessionKey = uniqueId.ToString();
