@@ -11,5 +11,6 @@ namespace Backend_Personal_Doctor.Models.Users.Persistance.Interface
         int RemoveUser(int id);
         User GetUserByEmailAndPassword(string email, string password);
         bool DoesEmailAndPasswordExist(string email, string password);
+        public bool IsEmailUnique(string email);
     }
 }
