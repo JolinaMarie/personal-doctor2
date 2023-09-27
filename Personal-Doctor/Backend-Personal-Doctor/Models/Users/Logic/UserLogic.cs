@@ -16,6 +16,11 @@ namespace Backend_Personal_Doctor.Models.Users.Logic
 
         public void AddUser(UserDtoForCreate user)
         {
+            if (!_userRepository.IsEmailUnique(user.email))
+            {
+                throw new ConflictResultException("Email is already in use.");
+            }
+
             this._userRepository.AddUser(user);
         }
 

@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
@@ -22,6 +23,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.component';
+
+import { SessionService } from './service/session.service';
 
 
 
@@ -47,6 +50,7 @@ import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.co
     MatButtonModule,
     FormsModule,
     MatToolbarModule,
+    MatSnackBarModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
@@ -56,7 +60,7 @@ import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.co
     AppRoutingModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [SessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
