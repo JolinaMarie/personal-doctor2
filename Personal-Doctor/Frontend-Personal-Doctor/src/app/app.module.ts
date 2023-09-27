@@ -26,6 +26,7 @@ import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.co
 import { BMIRechnerComponent } from './bmi-rechner/bmi-rechner.component';
 
 import { SessionService } from './service/session.service';
+import { MeinArztComponent } from './mein-arzt/mein-arzt.component';
 
 
 
@@ -38,6 +39,7 @@ import { SessionService } from './service/session.service';
     RegestrierenComponent,
     NavMenuComponent,
     KalorienRechnerComponent,
+    MeinArztComponent,
     BMIRechnerComponent,
     
   ],
