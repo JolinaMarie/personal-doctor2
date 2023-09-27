@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { NaehwerteComponent } from './naehwerte/naehwerte.component';
 import { RegestrierenComponent } from './regestrieren/regestrieren.component'
 import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.component';
+import { BMIRechnerComponent } from './bmi-rechner/bmi-rechner.component';
 
 
 const routes: Routes = [
@@ -13,8 +14,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'naehwerte', component: NaehwerteComponent},
   { path: 'regestrieren', component: RegestrierenComponent},
-  {path: 'kalorienRechner', component: KalorienRechnerComponent}
-  
+  {path: 'kalorienRechner', component: KalorienRechnerComponent},
+  {path: 'BMI-Rechner', component: BMIRechnerComponent}
 ]
 
 

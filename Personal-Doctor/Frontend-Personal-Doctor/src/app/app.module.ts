@@ -23,6 +23,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.component';
+import { BMIRechnerComponent } from './bmi-rechner/bmi-rechner.component';
 
 import { SessionService } from './service/session.service';
 
@@ -37,6 +38,7 @@ import { SessionService } from './service/session.service';
     RegestrierenComponent,
     NavMenuComponent,
     KalorienRechnerComponent,
+    BMIRechnerComponent,
     
   ],
   imports: [
