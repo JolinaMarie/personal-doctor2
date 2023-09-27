@@ -9,6 +9,7 @@ import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.co
 
 
 const routes: Routes = [
+  // {path: '', redirectTo: '/login', pathMatch: 'full' }, // Hier wird die Startseite als Standard festgelegt
   { path: 'login', component: LoginComponent},
   { path: 'home', component: HomeComponent},
   { path: 'naehwerte', component: NaehwerteComponent},
