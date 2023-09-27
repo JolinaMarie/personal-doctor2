@@ -29,7 +29,7 @@ public partial class PersonalDoctorContext : DbContext
             entity.HasKey(e => e.SessionId).HasName("PK__Sessions__C9F4927073A24E93");
 
             entity.Property(e => e.SessionId).HasColumnName("SessionID");
-            entity.Property(e => e.Expiry).HasColumnType("date");
+            entity.Property(e => e.Expiry).HasColumnType("datetime");
             entity.Property(e => e.SessionKey)
                 .HasMaxLength(50)
                 .IsUnicode(false);

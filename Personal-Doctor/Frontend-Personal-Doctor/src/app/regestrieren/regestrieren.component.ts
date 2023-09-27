@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RegestrierenService } from './regestrieren.service';
 import { User } from '../model/user.model';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-regestrieren',
@@ -15,23 +17,31 @@ export class RegestrierenComponent{
   errorMessage: string = ''; // Initialize an error message variable
   user: User = new User();
 
-  constructor(private registerUserService : RegestrierenService, private router: Router) { }
+  constructor(private registerUserService : RegestrierenService, private router: Router, private _snackBar: MatSnackBar) { }
 
   registerUser() {
     if (!this.user.areFieldsEmpty()) {
       if (this.user.password === this.user.confirmPassword && this.user.email === this.user.confirmEmail) {
         this.registerUserService.addUser(this.user).subscribe(
           (response: any) => {
-            // Handle successful registration (e.g., display a success message or navigate to a login page)
             console.log('User registration successful', response);
             this.user.clearFields();
+
+            this._snackBar.open('Benutzer erfolgreich Registriert', 'Close', {
+              duration: 3000, // Duration in milliseconds
+            });
+  
             setTimeout(() => {
-              this.router.navigate(['/login']); // Adjust the route path as needed
-            }, 5000);
+              this.router.navigate(['/login']);
+            }, 3000);
           },
           (error) => {
             console.error('Registration failed', error);
-            this.errorMessage = 'Registrierung fehlgeschlagen, bitte versuchen Sie es erneut: ' + error.message;
+            if (error instanceof HttpErrorResponse && error.status === 409) {
+              this.errorMessage = 'Die E-Mail-Adresse ist bereits registriert.';
+            } else {
+              this.errorMessage = 'Registrierung fehlgeschlagen, bitte versuchen Sie es erneut: ' + error.message;
+            }
           }
         );
       } else {
@@ -43,4 +53,5 @@ export class RegestrierenComponent{
       this.errorMessage = 'Bitte füllen Sie alle Felder aus.';
     }
   }
+  
 }

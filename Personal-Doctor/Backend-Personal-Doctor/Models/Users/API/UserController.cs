@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Backend_Personal_Doctor.Models.Users.Logic.Interface;
 using Backend_Personal_Doctor.Models.Users.DTOs;
+using Backend_Personal_Doctor.Middleware.ResultExceptionMiddleware;
 
 namespace Backend_Personal_Doctor.Models.Users.API
 {
@@ -31,8 +32,15 @@ namespace Backend_Personal_Doctor.Models.Users.API
         [HttpPost]
         public ActionResult<EfUser> AddUser([FromBody] UserDtoForCreate user)
         {
-            this._userLogic.AddUser(user);
-            return Ok(user);
+            try
+            {
+                this._userLogic.AddUser(user);
+                return Ok(user);
+            }
+            catch (ConflictResultException ex)
+            {
+                return StatusCode(409);
+            }
         }
 
         [HttpPut]
