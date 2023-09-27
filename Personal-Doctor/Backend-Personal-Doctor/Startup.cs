@@ -7,6 +7,10 @@ using Backend_Personal_Doctor;
 using Backend_Personal_Doctor.Contexts;
 using Backend_Personal_Doctor.Models.Sessions.Persistance.Interface;
 using Backend_Personal_Doctor.Models.Sessions.Persistance;
+using Backend_Personal_Doctor.Models.Naehrwerte.Logic.Interface;
+using Backend_Personal_Doctor.Models.Naehrwerte.Logic;
+using Backend_Personal_Doctor.Models.Naehrwerte.Persistance.Interface;
+using Backend_Personal_Doctor.Models.Naehrwerte.Persistance;
 
 namespace personal_doctor
 {
@@ -21,6 +25,7 @@ namespace personal_doctor
 
 
             //Dependency Injection
+            //Users
             services.AddScoped<IUserLogic, UserLogic>();
             services.AddScoped<IUserRepository, EfUsersRepository>();
 
@@ -28,6 +33,9 @@ namespace personal_doctor
             services.AddScoped<ISessionContext, SessionContext>();
             services.AddScoped<ISessionsRepository, EfSessionsRepository>();
 
+            //Naehrtwerte
+            services.AddScoped<INaehrwertLogic, NaehrwertLogic>();
+            services.AddScoped<INaehrwerteRepository, EfNaehrwerteRepository>();
         }
     }
 }

@@ -3,9 +3,9 @@
     public class Session
     {
         public int SessionId { get; set; }
-        public int userId { get; set; }
-        public string sessionKey { get; set; }
-        public DateTime expiry { get; set; }
+        public int UserId { get; set; }
+        public string SessionKey { get; set; }
+        public DateTime Expiry { get; set; }
 
         internal static Session FromEfSession(EfSession efSession)
         {
@@ -17,9 +17,9 @@
             return new Session()
             {
                 SessionId = efSession.SessionId,
-                userId = efSession.UserId,
-                sessionKey = efSession.SessionKey,
-                expiry = efSession.Expiry,
+                UserId = efSession.UserId,
+                SessionKey = efSession.SessionKey,
+                Expiry = efSession.Expiry,
             };
         }
     }

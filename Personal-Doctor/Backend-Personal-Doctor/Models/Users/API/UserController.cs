@@ -37,7 +37,7 @@ namespace Backend_Personal_Doctor.Models.Users.API
                 this._userLogic.AddUser(user);
                 return Ok(user);
             }
-            catch (ConflictResultException ex)
+            catch (ConflictResultException)
             {
                 return StatusCode(409);
             }

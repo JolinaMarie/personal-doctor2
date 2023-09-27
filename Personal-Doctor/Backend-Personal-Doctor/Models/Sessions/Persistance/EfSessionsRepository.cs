@@ -17,14 +17,14 @@ namespace Backend_Personal_Doctor.Models.Sessions.Persistance
             var efSession = new EfSession
             {
                 SessionId= session.SessionId,
-                UserId = session.userId,
-                Expiry = session.expiry,
-                SessionKey = session.sessionKey,
+                UserId = session.UserId,
+                Expiry = session.Expiry,
+                SessionKey = session.SessionKey,
             };
 
             _context.Sessions.Add(efSession);
             _context.SaveChanges();
-            return session.sessionKey;
+            return session.SessionKey;
         }
 
         public Session GetSession(string sessionKey)

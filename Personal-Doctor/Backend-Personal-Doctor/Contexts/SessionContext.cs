@@ -19,7 +19,7 @@ namespace Backend_Personal_Doctor.Contexts
         public int GetUserId()
         {
             this.EnsureSessionLoaded();
-            return this.session.userId;
+            return this.session.UserId;
         }
 
         public void Validate()

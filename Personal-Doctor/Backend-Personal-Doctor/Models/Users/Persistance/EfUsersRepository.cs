@@ -12,8 +12,6 @@ namespace Backend_Personal_Doctor.Models.Users.Persistance
             this._context = context;
         }
 
-
-
         public void AddUser(UserDtoForCreate user)
         {
             var efUser = new EfUser
@@ -80,6 +78,8 @@ namespace Backend_Personal_Doctor.Models.Users.Persistance
             EfUser efUser = _context.Users
                  .Where(efUser => efUser.UserId == id)
                  .Single();
+
+
 
             _context.Users.Remove(efUser);
             _context.SaveChanges();

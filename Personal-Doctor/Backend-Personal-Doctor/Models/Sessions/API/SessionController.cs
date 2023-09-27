@@ -35,9 +35,9 @@ namespace Backend_Personal_Doctor.Models.Sessions.API
             Guid uniqueId = Guid.NewGuid();
             string sessionKey = uniqueId.ToString();
 
-            session.userId = user.UserId;
-            session.expiry = expiry;
-            session.sessionKey = sessionKey;
+            session.UserId = user.UserId;
+            session.Expiry = expiry;
+            session.SessionKey = sessionKey;
 
             _sessionsRepository.CreateSession(session);
             return Ok(sessionKey);
