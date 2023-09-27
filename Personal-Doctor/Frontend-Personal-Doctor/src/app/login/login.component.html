@@ -1,71 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home-Page</title>
-  </head>
 
-  
-  <body>
-    <div id ="container">
-    <div class="logo-div">
-      <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" height="200"/>
-     
-    </div>
-    <div class="input-div">
-      <mat-form-field>
-        <mat-label>Enter your email</mat-label>
-        <input matInput type="email" id = "email" pattern=".+@globex\.com" required/>
-      </mat-form-field>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home-Page</title>
+</head>
 
-      <!-- <mat-form-field>
-        <mat-label>Passwort</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" />
 
-      </mat-form-field> -->
+<body>
 
-      <div class="Passwort">
-  
-        <mat-form-field>
-  
-          <mat-label>Passwort</mat-label>
-  
-          <input matInput [type]="hide ? 'password' : 'text'" />
-  
-          <button
-  
-            mat-icon-button
-  
-            matSuffix
-  
-            (click)="hide = !hide"
-  
-            [attr.aria-label]="'Hide password'"
-  
-            [attr.aria-pressed]="hide"
-  
-          >
-  
-            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-          </button>
-        </mat-form-field>
+  <form (ngSubmit)="loginUser()" #loginForm="ngForm">
+
+    <div id="container">
+      <div class="logo-div">
+        <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" height="200" />
+
       </div>
-  
+      <div class="input-div">
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input matInput type="email" id="email" name="email" [(ngModel)]="user.email" required />
+        </mat-form-field>
 
-      <button class="button" mat-raised-button color="primary" routerLink="/home">LOGIN</button>
-      <br />
+        <div class="Passwort">
+          <mat-form-field>
+            <mat-label>Passwort</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="user.password" required/>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
 
-      <button
-        mat-raised-button
-        class="button"
-        color= "primary"
-        routerLink="/regestrieren"
-      >
-        REGISTRIEREN
-      </button>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+
+        <button class="button" mat-raised-button color="primary" type="submit">LOGIN</button>
+        <br />
+
+        <button mat-raised-button class="button" color="primary" routerLink="/regestrieren">
+          REGISTRIEREN
+        </button>
+      </div>
     </div>
-  </div>
-  </body>
-</html>
+  </form>
+</body>
 
+</html>

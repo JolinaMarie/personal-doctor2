@@ -28,7 +28,7 @@ export class RegestrierenComponent{
             this.user.clearFields();
 
             this._snackBar.open('Benutzer erfolgreich Registriert', 'Close', {
-              duration: 3000, // Duration in milliseconds
+              duration: 3000,
             });
   
             setTimeout(() => {
