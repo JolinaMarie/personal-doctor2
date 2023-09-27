@@ -39,6 +39,15 @@ namespace Backend_Personal_Doctor.Models.Users.Persistance
             return efUser != null;
         }
 
+        public bool IsEmailUnique(string email)
+        {
+            EfUser efUser = _context.Users
+                .Where(efUser => efUser.Email == email)
+                .SingleOrDefault();
+
+            return efUser == null;
+        }
+
         public List<User> GetAllUsers()
         {
             List<User> efUser = _context.Users
