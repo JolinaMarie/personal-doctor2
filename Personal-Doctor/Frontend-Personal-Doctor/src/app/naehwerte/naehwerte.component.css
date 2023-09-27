@@ -27,3 +27,47 @@
     flex-direction: column;
     align-items: center;
 }
+
+.container {
+
+    justify-content: center; /* Horizontale Ausrichtung in der Mitte */
+    /* align-items: center; */
+    display: flex; /* Flexbox verwenden */
+    margin-left: 5%;
+  
+    
+  
+  }
+  
+   
+  
+  .Suchfeld {
+  
+    width: 13%; /* Breite der einzelnen Elemente anpassen */
+  
+    padding: 5px;
+  
+    /* border: 1px solid #ccc; */
+  
+    text-align: center;
+   
+  
+  }
+
+/* .Suchfeld{
+
+    float: left;
+    width: 50%;
+    display: block;
+    text-align: center;
+
+  
+  }
+
+  .Suche{
+    
+    
+    width: 10%;
+    display: block;
+
+  } */
