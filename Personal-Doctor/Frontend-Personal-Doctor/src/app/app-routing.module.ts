@@ -4,7 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { NaehwerteComponent } from './naehwerte/naehwerte.component';
-import { RegestrierenComponent } from './regestrieren/regestrieren.component';
+import { RegestrierenComponent } from './regestrieren/regestrieren.component'
+import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'naehwerte', component: NaehwerteComponent},
   { path: 'regestrieren', component: RegestrierenComponent},
+  {path: 'kalorienRechner', component: KalorienRechnerComponent}
   
 ]
 
