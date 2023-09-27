@@ -3,6 +3,8 @@ import { User } from '../model/user.model';
 import { LoginService } from './login.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SessionService } from '../service/session.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,7 @@ export class LoginComponent {
   hide = true;
   user: User = new User();
   errorMessage: string = '';
-  constructor(private loginService: LoginService, private formbuilder: FormBuilder, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router, private sessionService: SessionService, private _snackBar: MatSnackBar ) { }
 
 
   loginUser() {
@@ -27,7 +29,17 @@ export class LoginComponent {
     this.loginService.loginUser(this.user).subscribe(
       (response: any) => {
         console.log('User login successful', response);
-        this.router.navigate(['/login']);
+
+        
+
+        const sessionKey = response;
+        this.sessionService.setSessionKey(sessionKey);
+      
+        this._snackBar.open('Erfolgreich angemeldet', 'Close', {
+          duration: 2000,
+        });
+
+        this.router.navigate(['/home'])
       },
 
       (error) => {
