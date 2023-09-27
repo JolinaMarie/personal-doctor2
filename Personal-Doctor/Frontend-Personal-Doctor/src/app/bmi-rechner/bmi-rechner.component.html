@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI-Rechner</title>
+  </head>
+
+  <body>
+    <div id="Container">
+      <div class="Überschrift">
+        <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" />
+        <h1 class>BMI-Rechner</h1>
+      </div>
+
+      <div class="ersteZcon-div">
+        <div class="element">
+          <mat-form-field>
+            <mat-label>Geschlecht</mat-label>
+            <mat-select [(ngModel)]="geschlecht">
+              <mat-option value="one">Männlich</mat-option>
+              <mat-option value="two">Weiblich</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="element">
+          <mat-form-field>
+            <mat-label>Alter</mat-label>
+
+            <input matInput type="number" required [(ngModel)]="alter" />
+          </mat-form-field>
+        </div>
+
+        <div class="element">
+          <mat-form-field>
+            <mat-label>Größe</mat-label>
+
+            <input matInput type="number" required [(ngModel)]="groesse" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="Körpergewicht-div">
+        <mat-form-field>
+          <mat-label>Körpergewicht (KG)</mat-label>
+
+          <input matInput type="number" required [(ngModel)]="gewicht" />
+        </mat-form-field>
+      </div>
+
+      <div class="aswerten-div">
+        <button
+          mat-raised-button
+          class="button"
+          color="primary"
+          (click)="Berechnung()"
+        >
+          Auswerten
+        </button>
+      </div>
+
+      <div class="Ziel-div">
+        <h1>Ihr BMI beträgt {{ BMI }}</h1>
+      </div>
+
+      <div class="Ziel-div">
+        <h1>
+          Sie liegen somit im Bereich der/des {{ BMI_String }}
+        </h1>
+      </div>
+
+      <div class="Hinweis-div">
+        <p>
+          HINWEIS: "Hinter dieser App steckt eine KI. Für eine genaue Diagnose
+          kontaktieren Sie bitte ihren Arzt. Wir übernehmen keine Haftung!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
