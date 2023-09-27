@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <title>Document</title>
+    </head>
+
+    <body>
+
+        <div id="Container">
+
+            <div class="Überschrift">
+                <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" />
+                <h1 class>Mein Kalorienrechner</h1>
+            </div>
+
+
+            <div class="ersteZcon-div">
+                <div class="element">
+                    <mat-form-field>
+                        <mat-label>Geschlecht</mat-label>
+                        <mat-select>
+
+                            <mat-option value="one">Männlich</mat-option>
+                            <mat-option value="two">Weiblich</mat-option>
+
+                        </mat-select>
+
+                    </mat-form-field>
+                </div>
+            
+
+            
+                <div class="element">
+                    <mat-form-field>
+
+                        <mat-label>Alter</mat-label>
+
+                        <input matInput type="number" required />
+
+                    </mat-form-field>
+
+                </div>
+
+            
+                <div class="element">
+                    <mat-form-field>
+
+                        <mat-label>Größe</mat-label>
+
+                        <input matInput type="number" required />
+
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="Körpergewicht-div">
+
+                <mat-form-field>
+
+                    <mat-label>Körpergewicht (KG)</mat-label>
+
+                    <input matInput type="number" required />
+
+                </mat-form-field>
+
+            </div>
+
+            <div class =dritteZcon-div>
+
+
+            
+                <div class="element2">
+
+                    <mat-form-field>
+
+                        <mat-label>Alltagsaktivitäten (ohne Sport)</mat-label>
+
+                        <mat-select>
+
+                            <mat-option value="one">wenig aktiv</mat-option>
+                            <mat-option value="two">etwas aktiv</mat-option>
+                            <mat-option value="three">aktiv</mat-option>
+                            <mat-option value="four">sehr aktiv</mat-option>
+
+                        </mat-select>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="element2">
+
+                    <mat-form-field>
+
+                        <mat-label>Sport pro Woche</mat-label>
+                        <mat-select>
+                            <mat-option value="one">1x</mat-option>
+                            <mat-option value="two">2x</mat-option>
+                            <mat-option value="three">3x</mat-option>
+                            <mat-option value="four">4x</mat-option>
+                            <mat-option value="five">5x</mat-option>
+                            <mat-option value="six">6x</mat-option>
+                        </mat-select>
+
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="Ziel-div">
+
+                <mat-form-field>
+
+                    <mat-label>Ziel:</mat-label>
+
+                    <mat-select>
+
+                        <mat-option value="one">Abnehmen</mat-option>
+
+                        <mat-option value="two">Gewischt halten</mat-option>
+
+                        <mat-option value="three">Zunehmen</mat-option>
+
+                    </mat-select>
+
+                </mat-form-field>
+
+            </div>
+
+            <div class="aswerten-div">
+
+                <button mat-raised-button class="button" color="primary">Auswerten</button>
+
+            </div>
+
+            <div class="Ziel-div">
+                <h1>Zielkalorien:</h1>
+            </div>
+
+            <div class="Hinweis-div">
+                <p> HINWEIS: "Hinter dieser App steckt eine KI.
+
+                Für eine genaue Diagnose kontaktieren Sie bitte ihren Arzt.
+
+                Wir übernehmen keine Haftung!
+
+                </p>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

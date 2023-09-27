@@ -8,24 +8,17 @@
 
   
   <body>
-    <div id ="container">
-    <div class="logo-div">
-      <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" height="200"/>
-     
-    </div>
-    <div class="input-div">
-      <mat-form-field>
-        <mat-label>Enter your email</mat-label>
-        <input matInput type="email" id = "email" pattern=".+@globex\.com" required/>
-      </mat-form-field>
+      <div id ="container">
+      <div class="logo-div">
+        <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" height="200"/>
+      </div>
 
-      <!-- <mat-form-field>
-        <mat-label>Passwort</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" />
-
-      </mat-form-field> -->
-
-      <div class="Passwort">
+      <div class="input-div">
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input matInput type="email" id = "email" pattern=".+@globex\.com" required/>
+        </mat-form-field>
+    
   
         <mat-form-field>
   
@@ -33,24 +26,12 @@
   
           <input matInput [type]="hide ? 'password' : 'text'" />
   
-          <button
-  
-            mat-icon-button
-  
-            matSuffix
-  
-            (click)="hide = !hide"
-  
-            [attr.aria-label]="'Hide password'"
-  
-            [attr.aria-pressed]="hide"
-  
-          >
-  
+          <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
             <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-          </button>
+          </button> -->
+          
         </mat-form-field>
-      </div>
+      
   
 
       <button class="button" mat-raised-button color="primary" routerLink="/home">LOGIN</button>

@@ -1,0 +1,43 @@
+.Überschrift{
+
+  text-align: center;
+
+}
+
+.ersteZcon-div {
+  display: flex; /* Flexbox verwenden */
+  justify-content: center;
+   /* Platzierung der Elemente mit Abstand */
+}
+
+.element {
+  width: 25%; /* Breite der einzelnen Elemente anpassen */
+  padding: 10px;
+  text-align: center;
+}
+.Körpergewicht-div{
+  width: 47%;
+  text-align: center;
+}
+.dritteZcon-div {
+  display: flex; /* Flexbox verwenden */
+  justify-content: space-between;
+   /* Platzierung der Elemente mit Abstand */
+}
+.element2 {
+  width: 45%; /* Breite der einzelnen Elemente anpassen */
+  padding: 10px;
+  text-align: center;
+}
+.Ziel-div{
+  width: 45%;
+  text-align: center;
+  padding: 10px;
+}
+.aswerten-div{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+
