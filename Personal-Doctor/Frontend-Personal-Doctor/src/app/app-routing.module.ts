@@ -10,6 +10,7 @@ import { BMIRechnerComponent } from './bmi-rechner/bmi-rechner.component';
 
 
 const routes: Routes = [
+  // {path: '', redirectTo: '/login', pathMatch: 'full' }, // Hier wird die Startseite als Standard festgelegt
   { path: 'login', component: LoginComponent},
   { path: 'home', component: HomeComponent},
   { path: 'naehwerte', component: NaehwerteComponent},
