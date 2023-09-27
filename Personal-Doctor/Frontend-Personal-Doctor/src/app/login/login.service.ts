@@ -19,10 +19,9 @@ export class LoginService {
       'Content-Type': 'application/json'
     });
 
-    // Setze den responseType auf 'text', um die Antwort als Text zu erhalten
     const requestOptions = {
       headers: headers,
-      responseType: 'text' as 'json' // Hier setzen wir den responseType explizit auf 'text'
+      responseType: 'text' as 'json'
     };
 
     return this.http.post(`${this.baseUrl}/api/sessions/login`, user, requestOptions);
