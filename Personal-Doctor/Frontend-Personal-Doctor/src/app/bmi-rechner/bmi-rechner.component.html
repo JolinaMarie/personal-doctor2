@@ -13,17 +13,17 @@
         <h1 class>BMI-Rechner</h1>
       </div>
 
-      <div class="ersteZcon-div">
-        <div class="element">
-          <mat-form-field>
-            <mat-label>Geschlecht</mat-label>
-            <mat-select [(ngModel)]="geschlecht">
-              <mat-option value="one">Männlich</mat-option>
-              <mat-option value="two">Weiblich</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
+      <div class="geschlecht-div">
+        <mat-form-field>
+          <mat-label>Geschlecht</mat-label>
+          <mat-select [(ngModel)]="geschlecht">
+            <mat-option value="one">Männlich</mat-option>
+            <mat-option value="two">Weiblich</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
+      <div class="ersteZcon-div">
         <div class="element">
           <mat-form-field>
             <mat-label>Alter</mat-label>
@@ -39,14 +39,14 @@
             <input matInput type="number" required [(ngModel)]="groesse" />
           </mat-form-field>
         </div>
-      </div>
 
-      <div class="Körpergewicht-div">
-        <mat-form-field>
-          <mat-label>Körpergewicht (KG)</mat-label>
+        <div class="element">
+          <mat-form-field>
+            <mat-label>Körpergewicht (KG)</mat-label>
 
-          <input matInput type="number" required [(ngModel)]="gewicht" />
-        </mat-form-field>
+            <input matInput type="number" required [(ngModel)]="gewicht" />
+          </mat-form-field>
+        </div>
       </div>
 
       <div class="aswerten-div">
@@ -56,7 +56,7 @@
           color="primary"
           (click)="Berechnung()"
         >
-          Auswerten
+          BMI berechnen
         </button>
       </div>
 
@@ -65,9 +65,7 @@
       </div>
 
       <div class="Ziel-div">
-        <h1>
-          Sie liegen somit im Bereich der/des {{ BMI_String }}
-        </h1>
+        <h1>Sie liegen somit im Bereich der/des {{ BMI_String }}</h1>
       </div>
 
       <div class="Hinweis-div">

@@ -4,6 +4,11 @@
   
   }
   
+
+.geschlecht-div{
+    display: flex;
+    justify-content: center;
+}
   .ersteZcon-div {
     display: flex; /* Flexbox verwenden */
     justify-content: center;
@@ -19,16 +24,8 @@
     width: 47%;
     text-align: center;
   }
-  .dritteZcon-div {
-    display: flex; /* Flexbox verwenden */
-    justify-content: space-between;
-     /* Platzierung der Elemente mit Abstand */
-  }
-  .element2 {
-    width: 45%; /* Breite der einzelnen Elemente anpassen */
-    padding: 10px;
-    text-align: center;
-  }
+  
+  
   .Ziel-div{
     width: 45%;
     text-align: left;
