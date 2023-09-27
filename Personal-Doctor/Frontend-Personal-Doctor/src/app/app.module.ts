@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KalorienRechnerComponent } from './kalorien-rechner/kalorien-rechner.component';
 
 import { SessionService } from './service/session.service';
+import { MeinArztComponent } from './mein-arzt/mein-arzt.component';
 
 
 
@@ -37,6 +38,7 @@ import { SessionService } from './service/session.service';
     RegestrierenComponent,
     NavMenuComponent,
     KalorienRechnerComponent,
+    MeinArztComponent,
     
   ],
   imports: [
