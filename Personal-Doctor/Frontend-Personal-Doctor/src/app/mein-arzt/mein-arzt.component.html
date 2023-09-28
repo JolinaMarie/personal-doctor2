@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-         <title>Document</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
 
-    <body>
+<body>
 
-        <div id="Container">
+    <div id="Container">
 
-            <div class="Überschrift-div">
-                <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" />
-                <h1 class>Mein Arzt</h1>
-            </div>
-            
-            <div class="element-div">
-                <p><b>Bitte wählen Sie ihre Symptome</b> </p>
-                <mat-form-field>
-                
+        <div class="Überschrift-div">
+            <img src="assets/Personal-Doctor-Logo.png" alt="Logo" width="200" />
+            <h1 class>Mein Arzt</h1>
+        </div>
+
+        <div class="element-div">
+            <p><b>Bitte wählen Sie ihre Symptome</b> </p>
+            <mat-form-field>
+
                 <mat-label>Symptome</mat-label>
-                    <mat-select placeholder="Optionen auswählen" multiple>
+                <mat-select placeholder="Optionen auswählen" multiple [(ngModel)]="selectedSymptoms">
 
-                        <mat-option value="one">Fiber</mat-option>
-                        <mat-option value="two">Müdigkeit</mat-option>
-                        <mat-option value="three">Husten</mat-option>
-                        <mat-option value="four">Niesen</mat-option>
-                        <mat-option value="five">Gliederschmerzen</mat-option>
-                        <mat-option value="six">Schnupfen</mat-option>
-                        <mat-option value="seven">Halsschmerzen</mat-option>
-                        <mat-option value="eight">Durchfall</mat-option>
-                        <mat-option value="nine">Gliederschmerzen</mat-option>
-                        <mat-option value="ten">Schnupfen</mat-option>
-                        <mat-option value="eleven">Halsschmerzen</mat-option>
-                        <mat-option value="twelve">Durchfall</mat-option>
-                        <mat-option value="thirteen">Kopfschmerzen</mat-option>
-                        <mat-option value="fourteen">Kurzatmigkeit</mat-option>
-                        <mat-option value="fifteen">Störungen des Geruchs- und/oder Geschmackssinns</mat-option>
-                        <mat-option value="sixteen">Erbrechen</mat-option>
-                        <mat-option value="seventeen">Ohrenschmerzen</mat-option>
-                        <mat-option value="eightteen">Schwindel</mat-option>
-                        <mat-option value="nineteen">Sehstörungen</mat-option>
-
-                    </mat-select>
+                    <mat-option value="Fieber">Fieber</mat-option>
+                    <mat-option value="Husten">Husten</mat-option>
+                    <mat-option value="Kurzatmigkeit">Kurzatmigkeit</mat-option>
+                    <mat-option value="Durchfall">Durchfall</mat-option>
+                    <mat-option value="Gelenkschmerzen">Gelenkschmerzen</mat-option>
+                    <mat-option value="Kopfschmerzen">Kopfschmerzen</mat-option>
+                    <mat-option value="Hautausschlag">Hautausschlag</mat-option>
+                    <mat-option value="Muedigkeit">Muedigkeit</mat-option>
+                    <mat-option value="Gewichtsverlust">Gewichtsverlust</mat-option>
+                    <mat-option value="Durst und haeufiges Wasserlassen">Durst und häufiges Wasserlassen</mat-option>
+                    
+                </mat-select>
 
                 </mat-form-field>
             </div>
@@ -51,36 +42,42 @@
 
             <div class="auswerten-div">
 
-                <button mat-raised-button class="button" color="primary">Auswerten</button>
-                <br>
-                <br>
-    
-            </div>
-
-            <div class="text-div">
-                <p><b>Sie haben</b> </p>
-                <br>
-                <br>
-                <p><b>Behandlung:</b> </p>
-                <br>
-                <br>
-                <p><b>lindernde Lebensmittel:</b> </p>
+                <button mat-raised-button class="button" color="primary" (click)="fetchIllnesses()">Auswerten</button>
                 <br>
                 <br>
             </div>
 
-            <div class="Hinweis-div">
-                <p> HINWEIS: "Hinter dieser App steckt eine KI.
+            <div class="table-symptoms">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Krankheit</th>
+                      <th>Wahrscheinlichkeit</th>
+                      <th>Behandlung</th>
+                      <th>Lebensmittel</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let result of results ">
+                      <td>{{ result.illness }}</td>
+                      <td>{{ result.probability | number:'1.2-2' }}%</td>
+                      <td>{{ result.treatment }}</td>
+                      <td>{{ result.food }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+        <div class="Hinweis-div">
+            <p> HINWEIS: "Hinter dieser App steckt eine KI.
 
                 Für eine genaue Diagnose kontaktieren Sie bitte ihren Arzt.
 
                 Wir übernehmen keine Haftung!
 
-                </p>
-            </div>
+            </p>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
-        
-
-
