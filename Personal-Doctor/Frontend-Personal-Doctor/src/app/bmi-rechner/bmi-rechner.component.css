@@ -35,16 +35,11 @@
   }
   
   
-  .Ziel-div{
-    width: 45%;
-    text-align: left;
-    margin-left: 17.5%;
-    padding: 10px;
-  }
+
   .aswerten-div{
     width: 100%;
     text-align: center;
-    padding: 10px;
+    
     display: flex;
     justify-content: center;
     
