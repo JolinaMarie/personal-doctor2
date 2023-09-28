@@ -13,6 +13,10 @@ export class RegestrierenService {
     return this.http.get(`${this.baseUrl}/api/users/all`);
   } 
 
+  getUser(){
+    return this.http.get(`${this.baseUrl}/api/users`)
+  }
+
   addUser(user: User) {
     return this.http.post(`${this.baseUrl}/api/users`, user);
   }

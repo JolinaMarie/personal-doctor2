@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { NaehrwerteService } from './naehrwerte.service';
+import { Naehrwert } from '../model/naehrwert.model';
 
 @Component({
   selector: 'app-naehwerte',
@@ -7,19 +9,17 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./naehwerte.component.css']
 })
 
- export class NaehwerteComponent {
-//    displayedColumns: string[] = ['productName', 'calories', 'protein', 'carbohydrates', 'sugar', 'fat'];
-//    dataSource: MatTableDataSource<any>;
+export class NaehrwerteComponent implements OnInit {
+  dataSource = new MatTableDataSource<Naehrwert>();
+  displayedColumns: string[] = ['nahrungID', 'essen', 'brennwert', 'proteingehalt', 'kohlenhydrate', 'zucker', 'fett'];
 
-//    constructor() {
-      
-//      const data = [
-//        { productName: 'Produkt A', calories: 100, protein: 5, carbohydrates: 20, sugar: 10, fat: 3 },
-//        { productName: 'Produkt B', calories: 150, protein: 8, carbohydrates: 25, sugar: 12, fat: 4 },
-        
-//      ];
+  constructor(private naehrwertService: NaehrwerteService) { }
 
-//      this.dataSource = new MatTableDataSource(data);
-//    }
+  ngOnInit() {
+    this.naehrwertService.getAllNaehrwerte().subscribe((data: Naehrwert[]) => {
+      this.dataSource.data = data;
+    });
+  }
+}
 
- }
+

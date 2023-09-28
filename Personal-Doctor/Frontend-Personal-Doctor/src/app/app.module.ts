@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { NaehwerteComponent } from './naehwerte/naehwerte.component';
+import { NaehrwerteComponent } from './naehwerte/naehwerte.component';
 import { RegestrierenComponent } from './regestrieren/regestrieren.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
@@ -35,7 +36,7 @@ import { MeinArztComponent } from './mein-arzt/mein-arzt.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    NaehwerteComponent,
+    NaehrwerteComponent,
     RegestrierenComponent,
     NavMenuComponent,
     KalorienRechnerComponent,
@@ -55,10 +56,11 @@ import { MeinArztComponent } from './mein-arzt/mein-arzt.component';
     FormsModule,
     MatToolbarModule,
     MatSnackBarModule,
+    MatTableModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'naehwerte', component: NaehwerteComponent },
+      { path: 'naehwerte', component: NaehrwerteComponent },
     ]),
     BrowserAnimationsModule,
     AppRoutingModule

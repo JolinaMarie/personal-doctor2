@@ -41,43 +41,50 @@
     </p>
 </div>
 
-<!-- table.component.html -->
 
-<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="productName">
-      <th mat-header-cell *matHeaderCellDef>Produktname</th>
-      <td mat-cell *matCellDef="let row">{{row.productName}}</td>
-    </ng-container>
+<table mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="nahrungID">
+    <th mat-header-cell *matHeaderCellDef> Nahrungs ID</th>
+    <td mat-cell *matCellDef="let row"> {{ row.nahrungID }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="essen">
+    <th mat-header-cell *matHeaderCellDef> Essen </th>
+    <td mat-cell *matCellDef="let row"> {{ row.essen }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="brennwert">
+    <th mat-header-cell *matHeaderCellDef> Brennwert </th>
+    <td mat-cell *matCellDef="let row"> {{ row.brennwert }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="proteingehalt">
+    <th mat-header-cell *matHeaderCellDef> Proteingehalt </th>
+    <td mat-cell *matCellDef="let row"> {{ row.proteingehalt }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="kohlenhydrate">
+    <th mat-header-cell *matHeaderCellDef> Kohlenhydrate </th>
+    <td mat-cell *matCellDef="let row"> {{ row.kohlenhydrate }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="zucker">
+    <th mat-header-cell *matHeaderCellDef> Zucker </th>
+    <td mat-cell *matCellDef="let row"> {{ row.zucker }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fett">
+    <th mat-header-cell *matHeaderCellDef> Fett </th>
+    <td mat-cell *matCellDef="let row"> {{ row.fett }} </td>
+  </ng-container>
+
   
-    <ng-container matColumnDef="calories">
-      <th mat-header-cell *matHeaderCellDef>Brennwert</th>
-      <td mat-cell *matCellDef="let row">{{row.calories}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="protein">
-      <th mat-header-cell *matHeaderCellDef>Proteingehalt</th>
-      <td mat-cell *matCellDef="let row">{{row.protein}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="carbohydrates">
-      <th mat-header-cell *matHeaderCellDef>Kohlenhydrate</th>
-      <td mat-cell *matCellDef="let row">{{row.carbohydrates}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="sugar">
-      <th mat-header-cell *matHeaderCellDef>Zucker</th>
-      <td mat-cell *matCellDef="let row">{{row.sugar}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="fat">
-      <th mat-header-cell *matHeaderCellDef>Fett</th>
-      <td mat-cell *matCellDef="let row">{{row.fat}}</td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table> -->
+ <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
 
 <br />
 <br />
