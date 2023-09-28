@@ -56,3 +56,6 @@ if ranked_illnesses:
         print("{:<30} {:<20.2f}% {:<15} {:<10}".format(illness, probability, treatment, food))
 else:
     print("Keine Daten für diese Symptome gefunden.")
+
+
+
