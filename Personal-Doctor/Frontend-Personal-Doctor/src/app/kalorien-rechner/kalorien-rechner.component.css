@@ -1,6 +1,20 @@
-.Überschrift{
+#Container{
+  margin-left:auto;        
+  margin-right:auto;        
+  width: 700px;
+  background-color:#ffffff;        
+  padding:30px;
 
+}   
+
+
+.Überschrift{
+  width: 300;
+  height: 300;
   text-align: center;
+  display: block;
+  justify-content: space-between;
+  
 
 }
 
@@ -8,36 +22,63 @@
   display: flex; /* Flexbox verwenden */
   justify-content: center;
    /* Platzierung der Elemente mit Abstand */
+
 }
 
 .element {
-  width: 25%; /* Breite der einzelnen Elemente anpassen */
+  width: 35%; /* Breite der einzelnen Elemente anpassen */
   padding: 10px;
   text-align: center;
+  display: grid;
+  justify-content: space-between;
+
+
 }
 .Körpergewicht-div{
-  width: 47%;
+  width: 45%;
   text-align: center;
+  padding: 10px;
+  display: grid;
+  justify-content: space-between;
+
+
+
 }
 .dritteZcon-div {
   display: flex; /* Flexbox verwenden */
   justify-content: space-between;
    /* Platzierung der Elemente mit Abstand */
+
+
 }
 .element2 {
   width: 45%; /* Breite der einzelnen Elemente anpassen */
   padding: 10px;
   text-align: center;
+  display: grid;
+  justify-content: space-between;
+
+
 }
 .Ziel-div{
   width: 45%;
   text-align: center;
   padding: 10px;
+  display: grid;
+  justify-content: space-between;
+
 }
 .aswerten-div{
   width: 100%;
   text-align: center;
   padding: 10px;
+  display: grid;
+  justify-content: space-between;
+ 
+
+}
+.button{
+  background-color: rgba(68, 114, 196, 1);
 }
 
 .Hinweis-div{
@@ -47,4 +88,7 @@
   flex-direction: column;
   align-items: center;
   border: 3px solid rgb(51, 101, 237); 
+  display: grid;
+  justify-content: space-between;
+
 }

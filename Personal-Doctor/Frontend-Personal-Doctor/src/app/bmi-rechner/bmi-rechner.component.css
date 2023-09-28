@@ -1,3 +1,12 @@
+#Container{
+  margin-left:auto;        
+  margin-right:auto;        
+  width: 700px;
+  background-color:#ffffff;        
+  padding:30px;
+
+} 
+
 .Überschrift{
 
     text-align: center;
@@ -16,7 +25,7 @@
   }
   
   .element {
-    width: 25%; /* Breite der einzelnen Elemente anpassen */
+    width: 35%; /* Breite der einzelnen Elemente anpassen */
     padding: 10px;
     text-align: center;
   }
@@ -36,6 +45,9 @@
     width: 100%;
     text-align: center;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    
   }
   
   .Hinweis-div{
@@ -46,4 +58,7 @@
     align-items: center;
     border: 3px solid rgb(51, 101, 237); 
   }
+.button{
+  background-color: rgba(68, 114, 196, 1);
+}
   
