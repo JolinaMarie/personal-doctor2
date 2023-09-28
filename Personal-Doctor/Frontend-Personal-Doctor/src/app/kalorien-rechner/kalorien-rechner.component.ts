@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-kalorien-rechner',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./kalorien-rechner.component.css']
 })
 export class KalorienRechnerComponent {
+
+
   geschlecht: string = "";
   alter: number = NaN  ;
   groesse: number = NaN;

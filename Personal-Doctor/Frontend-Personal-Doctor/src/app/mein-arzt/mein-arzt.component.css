@@ -1,0 +1,42 @@
+#Container{
+    margin-left:auto;        
+    margin-right:auto;        
+    width: 700px;
+    background-color:#ffffff;        
+    padding:30px;
+  
+}   
+  
+  
+.Überschrift-div{
+    width: 300;
+    height: 300;
+    text-align: center;
+    display: block;
+    justify-content: space-between;
+}
+
+.auswerten-div{
+    width: 90%;
+    text-align: center;
+    
+    display: grid;
+    justify-content: space-between;
+   
+  
+}
+.button{
+    background-color: rgba(68, 114, 196, 1);
+}
+  
+.Hinweis-div{
+  
+    height: 450;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(51, 101, 237); 
+    display: grid;
+    justify-content: space-between;
+  
+}
