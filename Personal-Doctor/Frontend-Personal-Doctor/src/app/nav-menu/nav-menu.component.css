@@ -3,9 +3,9 @@
 }
 
 /* Stil für die span-Elemente innerhalb der Toolbar */
-.toolbar-text {
-  margin-right: 16px; /* Abstand zwischen den Textelementen */
-  font-size: 18px; /* Schriftgröße anpassen */
+.toolbar-text { 
+  margin-right:88%; /* Abstand zwischen den Textelementen */
+  font-size: 16px; /* Schriftgröße anpassen */
   color: "primary"; /* Textfarbe anpassen */
 }
 
